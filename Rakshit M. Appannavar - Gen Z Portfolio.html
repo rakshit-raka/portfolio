@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rakshit M. Appannavar | Portfolio, Resume and Bio-Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Space+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#E9DDFF;--card:#FFFDF7;--ink:#17122B;--muted:#4B4468;--pink:#FF5FA2;--lime:#C6F432;--sky:#7CC8FF;--sun:#FFD93D;--soft:#F3ECFF;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#150F2B;--card:#231A42;--ink:#F6F1FF;--muted:#BDB3DD;--soft:#2D2252;--pink:#FF77B2;--lime:#CFFA45;--sky:#8CD2FF;--sun:#FFE066}}
+:root[data-theme="dark"]{--bg:#150F2B;--card:#231A42;--ink:#F6F1FF;--muted:#BDB3DD;--soft:#2D2252;--pink:#FF77B2;--lime:#CFFA45;--sky:#8CD2FF;--sun:#FFE066}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,sans-serif;
+  background-image:radial-gradient(var(--ink) 1px,transparent 1.5px);background-size:26px 26px;background-attachment:fixed}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;margin:0;line-height:1.05}
+.mono{font-family:"Space Mono",monospace}
+:focus-visible{outline:4px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.hard{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--lime);border-bottom:3px solid var(--ink);color:#17122B}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font:800 19px "Bricolage Grotesque",sans-serif;text-decoration:none;color:#17122B}
+.logo i{font-style:normal;background:#17122B;color:var(--lime);border-radius:10px;padding:4px 9px;transform:rotate(-6deg)}
+.tabs{display:flex;gap:8px}
+.tabs a{color:#17122B;text-decoration:none;font-weight:500;padding:7px 16px;border:3px solid #17122B;border-radius:999px;background:#FFFDF7;transition:transform .12s}
+.tabs a:hover{transform:translateY(-2px) rotate(-2deg)}
+.tabs a[aria-current="page"]{background:var(--pink);box-shadow:3px 3px 0 #17122B}
+
+main{padding:36px 0 20px}
+.page[hidden]{display:none}
+
+/* home */
+.hero{background:var(--card);border-radius:28px;padding:44px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;position:relative}
+.tag{display:inline-block;background:var(--sun);color:#17122B;border:3px solid var(--ink);border-radius:999px;padding:3px 14px;font:700 13px "Space Mono",monospace;transform:rotate(-2deg)}
+.hero h1{font-size:clamp(46px,8vw,86px);letter-spacing:-.04em;margin:18px 0 6px}
+.hero h1 mark{background:var(--pink);color:#17122B;padding:0 .12em;border-radius:12px;display:inline-block;transform:rotate(-2deg)}
+.role{font:700 clamp(18px,2.6vw,24px) "Bricolage Grotesque",sans-serif}
+.bio{background:var(--soft);border:3px solid var(--ink);border-radius:18px;padding:16px 20px;margin:22px 0;color:var(--muted)}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font:700 16px "Bricolage Grotesque",sans-serif;text-decoration:none;color:#17122B;padding:12px 24px;border:3px solid var(--ink);border-radius:14px;background:var(--lime);box-shadow:5px 5px 0 var(--ink);transition:transform .1s,box-shadow .1s;cursor:pointer}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+.btn.b2{background:var(--sky)}
+.school{margin:22px 0 0;color:var(--muted);font-size:15px}
+.badge{position:relative;display:grid;place-items:center;min-height:300px}
+.disc{width:min(100%,270px);aspect-ratio:1;border-radius:50%;background:var(--pink);border:3px solid var(--ink);box-shadow:8px 8px 0 var(--ink);display:grid;place-content:center;text-align:center;color:#17122B}
+.disc b{display:block;font:800 64px "Bricolage Grotesque",sans-serif;background:var(--lime);border:3px solid var(--ink);border-radius:50%;width:112px;height:112px;line-height:104px;margin:0 auto 12px}
+.disc span{font:800 21px "Bricolage Grotesque",sans-serif}
+.disc small{font:700 12px "Space Mono",monospace}
+.st{position:absolute;background:var(--card);color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:4px 14px;font:700 13px "Space Mono",monospace;box-shadow:3px 3px 0 var(--ink)}
+.s1{top:6px;right:0;transform:rotate(6deg);background:var(--sun);color:#17122B}
+.s2{bottom:14px;left:0;transform:rotate(-5deg);background:var(--sky);color:#17122B}
+.s3{top:46%;right:-6px;transform:rotate(4deg)}
+.foot{margin:22px 0 0;background:var(--card);border-radius:18px;padding:12px;text-align:center;color:var(--muted);font-size:14px}
+
+/* document pages */
+.doc{background:var(--card);border-radius:24px;padding:34px 36px}
+.docbar{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:3px dashed var(--ink);padding-bottom:14px;margin-bottom:22px;font:700 12px "Space Mono",monospace;color:var(--muted)}
+.doc .btn{padding:8px 16px;font-size:14px;box-shadow:4px 4px 0 var(--ink)}
+.doc h1{font-size:clamp(34px,6vw,54px);letter-spacing:-.03em;text-transform:uppercase}
+.doc .sub{font:700 20px "Bricolage Grotesque",sans-serif;color:var(--pink);margin:6px 0 14px;-webkit-text-stroke:0}
+.center{text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px;padding:0;list-style:none}
+.chips li{background:var(--soft);border:2px solid var(--ink);border-radius:999px;padding:3px 13px;font:400 13px "Space Mono",monospace}
+.chips.sk li{border-radius:10px;font-size:14px;background:var(--sky);color:#17122B;font-weight:700}
+.sec{margin-top:26px}
+.sec h2{display:inline-block;font-size:17px;text-transform:uppercase;letter-spacing:.04em;background:var(--lime);color:#17122B;border:3px solid var(--ink);border-radius:10px;padding:3px 12px;margin-bottom:12px;transform:rotate(-1deg)}
+.box{background:var(--soft);border:3px solid var(--ink);border-radius:16px;padding:14px 18px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.row b{font-size:17px}.row .when{font:700 13px "Space Mono",monospace;color:var(--pink)}
+.small{color:var(--muted);font-size:14px}
+.box ul{margin:8px 0 0;padding-left:20px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cols .box{margin:0}
+.cols h3{font-size:18px;margin-bottom:2px}
+.tech{font:400 12px "Space Mono",monospace;color:var(--pink);margin-bottom:4px}
+dl.kv{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;margin:0}
+dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;font-weight:500}
+.todo{background:var(--sun);color:#17122B;border:2px dashed #17122B;border-radius:6px;padding:0 8px;font-size:14px}
+table{width:100%;border-collapse:collapse;border:3px solid var(--ink);border-radius:12px;overflow:hidden}
+th,td{padding:10px 14px;text-align:left;border-bottom:2px solid var(--ink)}
+th{background:var(--sky);color:#17122B}
+tr:last-child td{border-bottom:0}
+.tw{overflow-x:auto}
+.decl{margin-top:30px;border-top:3px dashed var(--ink);padding-top:14px}
+.sign{display:flex;justify-content:space-between;align-items:end;margin-top:26px;gap:16px}
+.sign div:last-child{border-top:3px solid var(--ink);padding-top:4px;font-weight:700;min-width:170px;text-align:right}
+
+@media (max-width:780px){
+  .hero{grid-template-columns:1fr;padding:28px 22px}
+  .cols{grid-template-columns:1fr}
+  .doc{padding:24px 18px}
+  dl.kv{grid-template-columns:1fr;gap:0 0}dl.kv dd{margin-bottom:10px}
+}
+@media (prefers-reduced-motion:reduce){.tabs a,.btn{transition:none}}
+@media print{
+  @page{margin:12mm}
+  body{background:#fff;color:#000;background-image:none}
+  .nav,.foot,.btn,.docbar{display:none}
+  .hard{box-shadow:none}
+  .doc{border:0;box-shadow:none;padding:0}
+  .page:not([hidden]) .doc{color:#000}
+  .sec,.box{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#home"><i>RA</i> Rakshit</a>
+  <nav class="tabs" aria-label="Pages"><a href="#home">Home</a><a href="#resume">Resume</a><a href="#biodata">Bio-Data</a></nav>
+</div></header>
+
+<main class="wrap">
+
+<!-- HOME -->
+<section class="page" id="home">
+  <div class="hero hard">
+    <div>
+      <span class="tag">WELCOME TO MY PORTFOLIO</span>
+      <h1>Rakshit <mark>Appannavar</mark></h1>
+      <div class="role">Computer Science Engineering Student</div>
+      <p class="bio">I like building smart stuff with code. My projects use AI to spot faces, catch scam emails and read what people watch. Right now I'm studying B.E. Computer Science at RVITM and leveling up in web development.</p>
+      <div class="btns"><a class="btn" href="#resume">View Resume &rarr;</a><a class="btn b2" href="#biodata">View Bio-Data</a></div>
+      <p class="school">Student &bull; RV Institute of Technology and Management (RVITM)</p>
+    </div>
+    <div class="badge">
+      <div class="disc"><div><b>R</b><span>RAKSHIT M. A.</span><br><small>CS Student &bull; 2027 Batch</small></div></div>
+      <span class="st s1">&lt;build /&gt;</span>
+      <span class="st s2">curious mind</span>
+      <span class="st s3">CGPA 8.2</span>
+    </div>
+  </div>
+  <div class="foot hard">&copy; 2026 Rakshit M. Appannavar | Computer Science and Engineering Student</div>
+</section>
+
+<!-- RESUME -->
+<section class="page" id="resume" hidden>
+  <div class="doc hard">
+    <div class="docbar"><span>DOCUMENT PREVIEW: RESUME</span><button class="btn" onclick="window.print()">Print / Save PDF</button></div>
+    <h1>Rakshit M. Appannavar</h1>
+    <div class="sub">Computer Science Engineering Student</div>
+    <ul class="chips"><li>+91 99643 67555</li><li>rakshitraka90@gmail.com</li><li>Bengaluru, Karnataka, India</li></ul>
+
+    <div class="sec"><h2>Career objective</h2>
+      <div class="box">Computer Science student aiming for a Full Stack / Web Developer role. Hands-on experience with Python-based and AI-driven projects, and eager to learn modern web technologies and contribute to real-world applications.</div></div>
+
+    <div class="sec"><h2>Education</h2>
+      <div class="box"><div class="row"><b>RV Institute of Technology and Management (RVITM)</b><span class="when">2023 - 2027</span></div><div class="small">B.E. in Computer Science and Engineering | CGPA: 8.2</div></div>
+      <div class="box"><div class="row"><b>Pre-University (12th)</b><span class="when">75%</span></div></div>
+      <div class="box"><div class="row"><b>Secondary School (10th)</b><span class="when">70%</span></div></div></div>
+
+    <div class="sec"><h2>Technical skills</h2>
+      <ul class="chips sk"><li>Python</li><li>Java</li><li>C</li><li>C++ (basics)</li><li>Jupyter Notebook</li></ul></div>
+
+    <div class="sec"><h2>Internship</h2>
+      <div class="box"><div class="row"><b>Technook | Intern</b><span class="when">6 months, 2023-24</span></div>
+        <ul><li>Built a YouTube Algorithm Analysis project using Python in Jupyter Notebook.</li><li>Analyzed user viewing trends and the types of videos users prefer to watch.</li></ul></div></div>
+
+    <div class="sec"><h2>Projects</h2>
+      <div class="cols">
+        <div class="box"><h3>Smart AI-Based Camera System</h3><div class="tech">College project</div><ul><li>Detects student faces and records attendance automatically.</li><li>Classifies students as active, inactive or using a phone.</li></ul></div>
+        <div class="box"><h3>Email Fraud Detector</h3><div class="tech">Python</div><ul><li>Scans emails for popular, trending scam keywords.</li><li>Flags emails that are likely to be fraud.</li></ul></div>
+        <div class="box"><h3>YouTube Algorithm Analysis</h3><div class="tech">Python &bull; Jupyter Notebook</div><ul><li>Analyzes a user's viewing behavior to find trends in the videos they like.</li></ul></div>
+      </div></div>
+
+    <div class="sec"><h2>Certifications and achievements</h2>
+      <div class="box">Technook Internship Certificate</div>
+      <div class="box">Participant, College Cybersecurity Hackathon (Certificate)</div></div>
+
+    <div class="decl"><b>DECLARATION</b><div class="small">I hereby declare that the information provided above is true and correct to the best of my knowledge.</div>
+      <div class="sign"><div class="small">Location: <b>Bengaluru</b></div><div>Rakshit M. Appannavar</div></div></div>
+  </div>
+</section>
+
+<!-- BIO-DATA -->
+<section class="page" id="biodata" hidden>
+  <div class="doc hard">
+    <div class="docbar"><span>DOCUMENT PREVIEW: BIO-DATA</span><button class="btn" onclick="window.print()">Print / Save PDF</button></div>
+    <div class="center"><h1>Bio-Data</h1><div class="sub">Rakshit M. Appannavar</div></div>
+
+    <div class="sec"><h2>Personal information</h2><div class="box"><dl class="kv">
+      <dt>Name</dt><dd>Rakshit M. Appannavar</dd>
+      <dt>Date of Birth</dt><dd><span class="todo">add your date of birth</span></dd>
+      <dt>Gender</dt><dd><span class="todo">add your gender</span></dd>
+      <dt>Nationality</dt><dd>Indian</dd>
+      <dt>Languages Known</dt><dd>Kannada, English, Hindi (also understands Telugu)</dd></dl></div></div>
+
+    <div class="sec"><h2>Contact information</h2><div class="box"><dl class="kv">
+      <dt>Phone</dt><dd>+91 99643 67555</dd>
+      <dt>Email</dt><dd>rakshitraka90@gmail.com</dd>
+      <dt>Location</dt><dd>Bengaluru, Karnataka, India</dd></dl></div></div>
+
+    <div class="sec"><h2>Educational qualification</h2><div class="tw"><table>
+      <tr><th>Qualification</th><th>Institution</th><th>Year / Score</th></tr>
+      <tr><td>B.E. Computer Science and Engineering</td><td>RV Institute of Technology and Management (RVITM)</td><td>2023 - 2027, CGPA 8.2</td></tr>
+      <tr><td>Pre-University (12th)</td><td><span class="todo">add college name</span></td><td>75%</td></tr>
+      <tr><td>Secondary School (10th)</td><td><span class="todo">add school name</span></td><td>70%</td></tr></table></div></div>
+
+    <div class="sec"><h2>Technical skills</h2><div class="box">Python, Java, C, C++ (basics), Jupyter Notebook.</div></div>
+
+    <div class="sec"><h2>Hobbies and strengths</h2><div class="box"><dl class="kv">
+      <dt>Hobbies</dt><dd><span class="todo">add your hobbies</span></dd>
+      <dt>Strengths</dt><dd><span class="todo">add your strengths</span></dd></dl></div></div>
+
+    <div class="decl"><b>DECLARATION</b><div class="small">I hereby declare that the information provided above is true and correct to the best of my knowledge.</div>
+      <div class="sign"><div class="small">Place: <b>Bengaluru</b></div><div>Rakshit M. Appannavar</div></div></div>
+  </div>
+</section>
+
+</main>
+<script>
+function route(){
+  var h=(location.hash||"#home").slice(1);
+  if(!document.getElementById(h))h="home";
+  document.querySelectorAll(".page").forEach(function(p){p.hidden=p.id!==h});
+  document.querySelectorAll(".tabs a").forEach(function(a){
+    if(a.getAttribute("href")==="#"+h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+  });
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
